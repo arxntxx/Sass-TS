@@ -1,0 +1,170 @@
+// Mixin para la sección Hero
+@mixin hero-section($hero-bg, $text-color, $font-stack, $midnight-gradient) {
+    display: flex;
+    align-items: center;
+    background-image: $hero-bg;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    padding: 50px;
+    position: relative;
+    
+    .text {
+        flex: 0 0 60%;
+        color: $text-color;
+        font-family: $font-stack;
+
+        h1 {
+            font-size: 8em;
+            margin-bottom: 10px;
+            background: $midnight-gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            font-family: $font-stack;
+        }
+    }
+}
+
+// Mixin para el botón
+@mixin midnight-button($bg-color, $text-color, $hover-bg, $hover-text) {
+    background-color: $bg-color;
+    color: $text-color;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-family: $font-stack;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    &:hover {
+        background-color: $hover-bg;
+        color: $hover-text;
+    }
+}
+
+// Mixin responsive para tablets y móviles
+@mixin hero-responsive($mobile-max, $tablet-max) {
+    @media (max-width: $tablet-max) {
+        .hero {
+            padding: 30px;
+
+            .text {
+                flex: 0 0 60%;
+                h1 {
+                    font-size: 5em;
+                }
+                p {
+                    font-size: 2em;
+                }
+            }
+            #hero-btn {
+                font-size: 1.2em;
+                padding: 12px 24px;
+            }
+        }
+    }
+
+    @media (max-width: $mobile-max) {
+        .hero {
+            .text {
+                flex: 0 0 50%; 
+                text-align: left;
+                margin-bottom: 20px;
+
+                h1 {
+                    font-size: 2.5em; 
+                }
+                p {
+                    font-size: 1em;
+                }
+            }
+
+            #hero-btn {
+                font-size: 12px;
+                padding: 10px 20px;
+            }
+        }
+    }
+}
+
+// Mixin para las Cards
+@mixin card-style($bg-color, $text-color, $shadow-color, $bg-image) {
+    background: $bg-image; 
+    background-size: cover;
+    background-position: center; 
+    color: $text-color;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba($shadow-color, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    font-family: $font-stack;
+    
+    &:hover {
+        transform: translateY(-10px); 
+        box-shadow: 0 8px 20px rgba($shadow-color, 0.3);
+    }
+
+    h2 {
+        font-size: 2em;
+        margin-bottom: 10px;
+        background: $midnight-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    p {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+
+    .card-btn {
+        @include midnight-button(#2b2b4a, #ffffff, #4f4f66, #fdf9f3); 
+        margin-top: 10px;
+    }
+}
+
+// Mixin responsive para las Cards
+@mixin responsive-cards($mobile-max, $tablet-max) {
+    @media (max-width: $tablet-max) {
+        .card {
+            width: 100%;
+            margin-bottom: 20px; 
+            h2 {
+                font-size: 3em;
+            }
+            p {
+                font-size: 2em; 
+            }
+            .card-btn {
+                padding: 10px 20px; 
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    @media (max-width: $mobile-max) {
+        .card {
+            width: 100%; 
+            margin-bottom: 15px;
+            h2 {
+                font-size: 1.5em; 
+            }
+            p {
+                font-size: 0.9em;
+            }
+            .card-btn {
+                padding: 8px 16px; 
+                font-size: 0.9em; 
+            }
+        }
+    }
+}

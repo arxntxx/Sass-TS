@@ -1,0 +1,328 @@
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("../fonts/Satoshi-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  background-color: #17144c;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  background-image: url("../images/midnights-bg-pc.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px;
+  position: relative;
+}
+.hero .text {
+  flex: 0 0 60%;
+  color: #1f203c;
+  font-family: "Satoshi";
+}
+.hero .text h1 {
+  font-size: 8em;
+  margin-bottom: 10px;
+  background: linear-gradient(80deg, #25253d, #9191d2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero .text p {
+  font-size: 1.5em;
+  margin-top: 10px;
+  font-family: "Satoshi";
+}
+.hero #hero-btn {
+  background-color: #2b2b4a;
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  font-family: "Satoshi";
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+.hero #hero-btn:hover {
+  background-color: #4f4f66;
+  color: #fdf9f3;
+}
+
+.card-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  background: url("../images/card1.png");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  font-family: "Satoshi";
+  width: 40%;
+  height: 300px;
+  margin: 20px;
+  display: inline-block;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.card h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  background: linear-gradient(80deg, #25253d, #9191d2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.card .card-btn {
+  background-color: #2b2b4a;
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  font-family: "Satoshi";
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+.card .card-btn:hover {
+  background-color: #4f4f66;
+  color: #fdf9f3;
+}
+.card .button-container {
+  display: flex;
+  justify-content: center;
+}
+.card .card-btn {
+  display: block;
+}
+.card:nth-child(2) {
+  background: url("../images/card2.png");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  font-family: "Satoshi";
+}
+.card:nth-child(2):hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.card:nth-child(2) h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  background: linear-gradient(80deg, #25253d, #9191d2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card:nth-child(2) p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.card:nth-child(2) .card-btn {
+  background-color: #2b2b4a;
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  font-family: "Satoshi";
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+.card:nth-child(2) .card-btn:hover {
+  background-color: #4f4f66;
+  color: #fdf9f3;
+}
+.card:nth-child(3) {
+  background: url("../images/card3.png");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  font-family: "Satoshi";
+}
+.card:nth-child(3):hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.card:nth-child(3) h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  background: linear-gradient(80deg, #25253d, #9191d2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card:nth-child(3) p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.card:nth-child(3) .card-btn {
+  background-color: #2b2b4a;
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  font-family: "Satoshi";
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+.card:nth-child(3) .card-btn:hover {
+  background-color: #4f4f66;
+  color: #fdf9f3;
+}
+.card:nth-child(4) {
+  background: url("../images//card4.png");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  font-family: "Satoshi";
+}
+.card:nth-child(4):hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.card:nth-child(4) h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  background: linear-gradient(80deg, #25253d, #9191d2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card:nth-child(4) p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.card:nth-child(4) .card-btn {
+  background-color: #2b2b4a;
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  font-family: "Satoshi";
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+.card:nth-child(4) .card-btn:hover {
+  background-color: #4f4f66;
+  color: #fdf9f3;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    padding: 30px;
+  }
+  .hero .text {
+    flex: 0 0 60%;
+  }
+  .hero .text h1 {
+    font-size: 5em;
+  }
+  .hero .text p {
+    font-size: 2em;
+  }
+  .hero #hero-btn {
+    font-size: 1.2em;
+    padding: 12px 24px;
+  }
+}
+@media (max-width: 767px) {
+  .hero .text {
+    flex: 0 0 50%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .hero .text h1 {
+    font-size: 2.5em;
+  }
+  .hero .text p {
+    font-size: 1em;
+  }
+  .hero #hero-btn {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .card h2 {
+    font-size: 3em;
+  }
+  .card p {
+    font-size: 2em;
+  }
+  .card .card-btn {
+    padding: 10px 20px;
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 767px) {
+  .card {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .card h2 {
+    font-size: 1.5em;
+  }
+  .card p {
+    font-size: 0.9em;
+  }
+  .card .card-btn {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+}/*# sourceMappingURL=style.css.map */

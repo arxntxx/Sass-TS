@@ -1,0 +1,76 @@
+@import 'mixins';
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../fonts/Satoshi-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../fonts/Satoshi-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+// Variables
+$primary-bg: #17144c;
+$hero-bg: url('../images/midnights-bg-pc.png');
+$text-color: #1f203c;
+$card-text-color: #000000;
+$font-stack: 'Satoshi';
+$midnight-gradient: linear-gradient(80deg, #25253d, #9191d2);
+$card-bg-image-1: url('../images/card1.png');
+$card-bg-image-2: url('../images/card2.png'); 
+$card-bg-image-3: url('../images/card3.png'); 
+$card-bg-image-4: url('../images//card4.png'); 
+
+body{
+    background-color: $primary-bg
+}
+.hero {
+    @include hero-section($hero-bg, $text-color, $font-stack, $midnight-gradient);
+
+    #hero-btn {
+        @include midnight-button(#2b2b4a, #ffffff, #4f4f66, #fdf9f3);
+        margin-top: 10px;
+    }
+}
+.card-section {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    padding: 20px;
+}
+.card {
+    @include card-style($hero-bg, #ffffff, #000000, $card-bg-image-1); 
+
+    width: 40%;
+    height: 300px;
+    margin: 20px; 
+    display: inline-block;
+    .button-container{
+        display: flex;
+        justify-content: center;
+    }
+    .card-btn {
+        display: block;
+    }
+
+    &:nth-child(2) {
+        @include card-style($hero-bg, #ffffff, #000000, $card-bg-image-2);
+    }
+
+    &:nth-child(3) {
+        @include card-style($hero-bg, #ffffff, #000000, $card-bg-image-3);
+    }
+
+    &:nth-child(4) {
+        @include card-style($hero-bg, #ffffff, #000000, $card-bg-image-4);
+    }  
+    
+}
+
+@include hero-responsive(767px, 1024px); 
+@include responsive-cards(767px, 1024px); 
